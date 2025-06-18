@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerHTML = `
         <header class="fixed-header">
             <nav class="header-nav">
-                <a href="index.html"> 
+                <a href="https://vizdexproject.com"> 
                     <img src="https://vizdexproject.com/assets/images/header-logo.png" alt="A Sans-Serif VizDex typographic logo" class="header-logo">
                 </a>
                 <div class="header-buttons">
