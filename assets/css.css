@@ -39,7 +39,8 @@ html {
     font-style: normal;
     line-height: 1.6;
     letter-spacing: 0.005em;
-   
+    text-align: center;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -85,26 +86,31 @@ html {
         align-items: center;
         width: 90vw;
         padding: 1.5rem 0;
-        gap: 15px;
+        gap: 0;
     }
 
     .header-logo {
         height: 30px;
-        margin-bottom: 10px;
-    }
-
-    .header-nav a {
-        padding: 0.5em 0;
+        margin-bottom: 15px;
     }
 
     .header-buttons {
         flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
+        gap: 15px;
+        margin-top: 0;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header-nav a {
+        padding: 0.5em 0;
+        text-align: center;
+        width: 100%;
     }
 
     body .content {
-        margin-top: calc(6rem + 3rem) !important;
+        padding-top: 150px;
+        margin-top: 0 !important;
     }
 }
 
@@ -295,7 +301,6 @@ p {
 
     .content {
         width: 90vw;
-        margin-top: 2rem !important;
         padding: 15px;
         box-sizing: border-box;
     }
