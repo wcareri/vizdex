@@ -55,11 +55,13 @@ html {
     width: 46vw;
     margin: 0 auto;
     padding: 3rem 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .header-buttons {
     display: flex;
     gap: 40px;
+    transition: all 0.3s ease-in-out;
 }
 
 .header-nav a {
@@ -88,6 +90,35 @@ html {
     height: 40px;
 }
 
+.hamburger-menu {
+    display: none; /* Hidden by default, shown only on mobile */
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 1100; /* Ensure it's above other elements if needed */
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #E5E5E5;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 @media (max-width: 768px) {
     .header-nav {
         flex-direction: column;
@@ -95,11 +126,30 @@ html {
         width: 90vw;
         padding: 1.5rem 0;
         gap: 0;
+        position: relative;
+        justify-content: flex-start;
+        overflow: hidden;
+        height: 80px;
+    }
+
+    .header-nav.menu-open {
+        height: auto;
+        padding-bottom: 2rem;
     }
 
     .header-logo {
         height: 30px;
-        margin-bottom: 15px;
+        margin-bottom: 0;
+        position: absolute;
+        left: 5vw;
+        top: 1.5rem;
+    }
+
+    .hamburger-menu {
+        display: block;
+        position: absolute;
+        right: 5vw;
+        top: 2rem;
     }
 
     .header-buttons {
@@ -108,6 +158,19 @@ html {
         margin-top: 0;
         align-items: center;
         width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .header-buttons.active {
+        max-height: 300px;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        margin-top: 50px;
     }
 
     .header-nav a {
@@ -117,7 +180,7 @@ html {
     }
 
     body .content {
-        padding-top: 150px;
+        padding-top: 100px;
         margin-top: 0 !important;
     }
 }
