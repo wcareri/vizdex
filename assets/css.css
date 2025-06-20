@@ -14,6 +14,14 @@
     format("ttf");
 }
 
+@font-face {
+    font-family: "Poppins-Light";
+    font-weight: 400;
+    font-style: normal;
+    src: url("fonts/Poppins-Light.ttf");
+    format("ttf");
+}
+
 html {
     --mobile-scale: 1.4;
     --mobile-padding-offset: 0.68;
@@ -385,4 +393,27 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     color: #A0A0A0;
+}
+
+/* FOOTER */
+
+.footer-content .caption {
+    font-family: Poppins-Light;
+    color: #A0A0A0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0em;
+    white-space: nowrap;
+}
+
+.footer-content .caption a {
+    color: #A0A0A0;
+    text-decoration: none;
+}
+
+.footer-content .caption a:hover {
+    text-decoration: underline;
 }
