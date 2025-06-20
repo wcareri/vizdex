@@ -134,22 +134,37 @@ html {
 
     .header-nav.menu-open {
         height: auto;
+        padding-top: 3rem;
         padding-bottom: 2rem;
     }
 
-    .header-logo {
-        height: 30px;
-        margin-bottom: 0;
+    .header-nav > a:first-child {
         position: absolute;
         left: 5vw;
-        top: 1.5rem;
+        top: 3rem;
+        height: 30px;
+        width: auto;
+        display: inline-block;
+        padding: 0;
+        line-height: 0;
+        font-size: 0;
+        z-index: 10;
+    }
+
+    .header-nav > a:first-child .header-logo {
+        display: block;
+        height: 100%;
+        width: auto;
+        margin-bottom: 0;
+        position: static;
     }
 
     .hamburger-menu {
         display: block;
         position: absolute;
         right: 5vw;
-        top: 2rem;
+        top: 3rem;
+        z-index: 10;
     }
 
     .header-buttons {
@@ -173,7 +188,7 @@ html {
         margin-top: 50px;
     }
 
-    .header-nav a {
+    .header-buttons a {
         padding: 0.5em 0;
         text-align: center;
         width: 100%;
@@ -359,10 +374,17 @@ p {
 }
 
 @media (max-width: 768px) {
+    .main-content-wrapper {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        max-width: 768px;
+    }
+
     .blog-gallery {
         grid-template-columns: 1fr;
-        width: 90vw;
-        padding: 0 15px;
+        width: 100%;
         box-sizing: border-box;
     }
 
@@ -371,23 +393,34 @@ p {
     }
 
     .content {
-        width: 90vw;
+        width: 100%;
         padding: 15px;
         box-sizing: border-box;
     }
 
     #filters {
-        width: 90vw;
-        padding: 0 15px;
+        width: 100%;
         box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .separator-line {
-        width: 90vw;
+        width: 100%;
+        margin: 20px 0;
     }
 
     h1, h2, p, .blog-item h3, .blog-item p {
         font-size: 0.9em;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        justify-content: flex-start;
     }
 }
 
@@ -456,6 +489,31 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     color: #A0A0A0;
+}
+
+/* EMBEDDED SUBMIT FORM */
+
+.responsive-form-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 187.5%;
+}
+
+.responsive-form-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .responsive-form-container {
+    padding-top: 200%;
+    height: 500px;
+  }
 }
 
 /* FOOTER */

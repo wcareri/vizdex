@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.insertAdjacentHTML('afterbegin', headerHTML);
     }
 
-    // --- NEW JAVASCRIPT FOR HAMBURGER MENU ---
     const hamburgerMenu = document.getElementById('hamburgerMenu');
     const headerButtons = document.getElementById('headerButtons');
     const headerNav = document.getElementById('headerNav');
